@@ -18,7 +18,7 @@ int count = 1;
 while (count<num+1) 
 {
     double square = Math.Pow(count, 2);
-Console.WriteLine($"{count} {square}");
+Console.WriteLine($"{count, 3} {square, 4}");
 count++;
 }
 
