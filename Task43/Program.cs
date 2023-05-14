@@ -10,16 +10,16 @@ int Text(string message)
 }
 
 
-double ParameterX (int k1, int k2, int b1, int b2)
+double ParameterX(int k1, int k2, int b1, int b2)
 {
- return (b2-b1) / (double)(k1-k2);
+    return (b2 - b1) / (double)(k1 - k2);
 
 }
 
-double ParameterY (int k1, int k2, int b1, int b2, double x)
+double ParameterY(int k1, int k2, int b1, int b2, double x)
 {
 
-    return k1*x+b1;
+    return k1 * x + b1;
 }
 
 int numberK1 = Text("Введите коэффициент K1: ");
@@ -27,8 +27,14 @@ int numberK2 = Text("Введите коэффициент K2: ");
 int numberB1 = Text("Введите коэффициент B1: ");
 int numberB2 = Text("Введите коэффициент B2: ");
 
-
-double parameterX = Math.Round(ParameterX (numberK1, numberK2, numberB1, numberB2),1);
-double parameterY = Math.Round(ParameterY (numberK1, numberK2, numberB1, numberB2, parameterX),1);
-System.Console.WriteLine($"Координаты точки пересечения двух прямых ({parameterX};{parameterY})");
-
+if (numberK1 == numberK2 && numberB1 == numberB2) Console.WriteLine("Прямые являются одинаковыми");
+else
+{
+    if (numberK1 == numberK2) Console.WriteLine("Прямые являются параллельными");
+    else
+    {
+        double parameterX = Math.Round(ParameterX(numberK1, numberK2, numberB1, numberB2), 1);
+        double parameterY = Math.Round(ParameterY(numberK1, numberK2, numberB1, numberB2, parameterX), 1);
+        System.Console.WriteLine($"Координаты точки пересечения двух прямых ({parameterX};{parameterY})");
+    }
+}
