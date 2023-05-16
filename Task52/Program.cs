@@ -38,7 +38,6 @@ void PrintMatrix(int[,] image)
     }
 
 }
-
 double[] ColumnAverage(int[,] image)
 {
 
@@ -55,11 +54,10 @@ double[] ColumnAverage(int[,] image)
 
         }
         average[i] = sum / count;
-        
-    }
-        return average;
-}
 
+    }
+    return average;
+}
 void PrintArray(double[] col)
 {
     int count = col.Length;

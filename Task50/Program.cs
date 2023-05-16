@@ -60,7 +60,8 @@ int PositionValue(int[,] matr, int x, int y)
 }
 if (row < 0 || column < 0 || row > 2 || column > 3)
     Console.WriteLine($"Указаны неверные координаты");
-else {
+else
+{
     int positionValue = PositionValue(matrix, row, column);
-Console.WriteLine($"Значение элемента с указанными позициями равно {positionValue}");
+    Console.WriteLine($"Значение элемента с указанными позициями равно {positionValue}");
 }
