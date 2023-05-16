@@ -5,7 +5,7 @@
 // 5 -2 33 -2
 // 77 3 8 1
 
-int[,] pic1 = new int[3, 4];
+int[,] matrix = new int[3, 4];
 
 
 void FillMatrix(int[,] matr)
@@ -38,6 +38,6 @@ void PrintMatrix(int[,] image)
     
 }
 
-FillMatrix(pic1);
-PrintMatrix(pic1);
+FillMatrix(matrix);
+PrintMatrix(matrix);
 Console.WriteLine();
