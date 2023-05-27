@@ -80,15 +80,15 @@ int[] CountElements(int[] arr)
 {
     int maxNumber = 9;
     int[] count = new int[maxNumber];
-int sum = 1;
+    int sum = 1;
     for (int i = 0; i < maxNumber; i++)
     {
-        for (int j = sum-1; j < arr.Length; j++)
+        for (int j = sum - 1; j < arr.Length; j++)
         {
-           if (arr[j] == i+1) count[i] = count[i] + 1; 
-           if (arr[j] == i+1) sum += 1;
+            if (arr[j] == i + 1) count[i] = count[i] + 1;
+            if (arr[j] == i + 1) sum += 1;
         }
-        
+
     }
     return count;
 }
