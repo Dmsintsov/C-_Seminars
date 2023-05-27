@@ -16,7 +16,7 @@ void FillMatrix(double[,] matr, int min, int max)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i, j] = random.NextDouble() * (max-min) + min;
+            matr[i, j] = random.NextDouble() * (max - min) + min;
         }
 
     }
@@ -30,12 +30,12 @@ void PrintMatrix(double[,] image)
         Console.Write("|");
         for (int j = 0; j < image.GetLength(1); j++)
         {
-            Console.Write($"{Math.Round(image[i, j],1), 5} ");
+            Console.Write($"{Math.Round(image[i, j], 1),5} ");
 
         }
-       Console.WriteLine("|");
+        Console.WriteLine("|");
     }
-    
+
 }
 
 FillMatrix(matrix, -10, 10);
