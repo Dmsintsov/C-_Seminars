@@ -42,10 +42,20 @@ int[,] MatrixMultiplication(int[,] matrA, int[,] matrB)
     {
         for (int j = 0; j < matrC.GetLength(1); j++)
         {
-            for (int k = 0; k < matrC.GetLength(0); k++)
+            if (matrB.GetLength(0) > matrA.GetLength(1))
             {
-                matrC[i, j] += matrA[i, k] * matrB[k, j];
+                for (int k = 0; k < matrB.GetLength(0); k++)
+                {
+                    matrC[i, j] += matrA[i, k] * matrB[k, j];
 
+                }
+            }
+            else
+            {
+                for (int k = 0; k < matrA.GetLength(1); k++)
+                {
+                    matrC[i, j] += matrA[i, k] * matrB[k, j];
+                }
             }
         }
     }
